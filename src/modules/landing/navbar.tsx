@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Toggle } from "@/shared/components/ui/toggle";
 import { Button } from "@/shared/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +47,7 @@ export function Navbar() {
           <Toggle />
           <div className="hidden md:flex gap-3">
             <Button variant="outline">Log In</Button>
-            <Button>Get Started</Button>
+            <Button variant="regular">Get Started</Button>
           </div>
 
           {/* Mobile menu toggle */}
@@ -60,42 +61,49 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t bg-background">
-          <div className="mx-auto max-w-7xl px-4 py-4">
-            <nav className="flex flex-col gap-4">
-              <a
-                href="#features"
-                className="text-sm font-medium hover:text-foreground transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Features
-              </a>
-              <a
-                href="#how-it-works"
-                className="text-sm font-medium hover:text-foreground transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                How It Works
-              </a>
-              <a
-                href="#pricing"
-                className="text-sm font-medium hover:text-foreground transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Pricing
-              </a>
-              <div className="flex flex-col gap-2 pt-4">
-                <Button variant="outline" className="w-full">
-                  Log In
-                </Button>
-                <Button className="w-full">Get Started</Button>
-              </div>
-            </nav>
-          </div>
+      {/* Mobile Nav - with smooth animation */}
+      <div
+        className={cn(
+          "md:hidden overflow-hidden border-t bg-background transition-all duration-300 ease-in-out",
+          isMenuOpen
+            ? "max-h-screen opacity-100 py-4"
+            : "max-h-0 opacity-0 py-0"
+        )}
+      >
+        <div className="mx-auto max-w-7xl px-4">
+          <nav className="flex flex-col gap-4">
+            <a
+              href="#features"
+              className="text-sm font-medium hover:text-foreground transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Features
+            </a>
+            <a
+              href="#how-it-works"
+              className="text-sm font-medium hover:text-foreground transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              How It Works
+            </a>
+            <a
+              href="#pricing"
+              className="text-sm font-medium hover:text-foreground transition-color"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Pricing
+            </a>
+            <div className="flex flex-col gap-2 pt-4">
+              <Button variant="outline" className="w-full">
+                Log In
+              </Button>
+              <Button variant="regular" className="w-full">
+                Get Started
+              </Button>
+            </div>
+          </nav>
         </div>
-      )}
+      </div>
     </header>
   );
 }

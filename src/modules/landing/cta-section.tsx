@@ -16,7 +16,7 @@ export function CTASection() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button size="lg" className="group">
+            <Button size="lg" className="group" variant="regular">
               Start Your Free Trial
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>

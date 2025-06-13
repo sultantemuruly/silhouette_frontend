@@ -56,10 +56,10 @@ export function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-muted/50">
+    <section id="pricing" className="py-20 bg-blue-100/10">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+          <div className="inline-block bg-blue-600/10 text-blue-700 rounded-lg px-3 py-1 text-sm">
             Pricing
           </div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -75,12 +75,12 @@ export function PricingSection() {
             <Card
               key={i}
               className={`flex flex-col ${
-                plan.popular ? "border-primary shadow-lg" : ""
+                plan.popular ? "border-blue-600 shadow-lg" : ""
               }`}
             >
               <CardHeader>
                 {plan.popular && (
-                  <div className="inline-block rounded-full px-3 py-1 text-xs bg-primary text-primary-foreground mb-2">
+                  <div className="inline-block rounded-full px-3 py-1 text-xs bg-blue-600 text-primary-foreground mb-2">
                     Most Popular
                   </div>
                 )}
@@ -106,7 +106,7 @@ export function PricingSection() {
               <CardFooter>
                 <Button
                   className="w-full"
-                  variant={plan.popular ? "default" : "outline"}
+                  variant={plan.popular ? "regular" : "outline"}
                 >
                   {plan.cta}
                 </Button>

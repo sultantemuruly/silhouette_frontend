@@ -55,10 +55,10 @@ export function FeaturesSection() {
   ];
 
   return (
-    <section id="features" className="py-20 bg-muted/50">
+    <section id="features" className="py-20 bg-blue-100/10">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+          <div className="inline-block rounded-lg px-3 py-1 text-sm bg-blue-600/10 text-blue-700">
             Core Features
           </div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -73,7 +73,7 @@ export function FeaturesSection() {
           {features.map((feature, i) => (
             <Card key={i} className="bg-background">
               <CardHeader>
-                <div className="p-2 w-fit rounded-md bg-primary/10 text-primary mb-3">
+                <div className="p-2 w-fit rounded-md bg-blue-500/10 text-blue-700 mb-3">
                   {feature.icon}
                 </div>
                 <CardTitle>{feature.title}</CardTitle>

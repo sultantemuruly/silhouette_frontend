@@ -35,7 +35,7 @@ export function HowItWorks() {
       <div className="container px-4 md:px-6">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16 items-center">
           <div>
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm mb-4">
+            <div className="inline-block rounded-lg bg-blue-600/10 text-blue-700 px-3 py-1 text-sm mb-4">
               How It Works
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -50,7 +50,7 @@ export function HowItWorks() {
             <div className="mt-8 space-y-4">
               {benefits.map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="rounded-full bg-primary/10 p-1 text-primary">
+                  <div className="rounded-full bg-blue-600/10 p-1 text-blue-700">
                     <Check className="h-5 w-5" />
                   </div>
                   <span>{benefit}</span>
@@ -62,7 +62,7 @@ export function HowItWorks() {
           <div className="space-y-8">
             {steps.map((step, i) => (
               <div key={i} className="relative pl-8 border-l">
-                <div className="absolute left-0 flex items-center justify-center w-8 h-8 -translate-x-1/2 rounded-full bg-primary text-primary-foreground text-sm font-medium">
+                <div className="absolute left-0 flex items-center justify-center w-8 h-8 -translate-x-1/2 rounded-full bg-blue-600 text-primary-foreground text-sm font-medium">
                   {step.number}
                 </div>
                 <h3 className="text-xl font-bold">{step.title}</h3>

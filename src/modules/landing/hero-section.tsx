@@ -21,7 +21,7 @@ export function HeroSection() {
               complexity.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button size="lg" className="group">
+              <Button size="lg" className="group" variant="regular">
                 Get Started Free
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
@@ -60,7 +60,7 @@ export function HeroSection() {
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3 p-3 rounded-md border bg-card">
-                      <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                      <div className="h-8 w-8 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-700">
                         <Sparkles className="h-4 w-4" />
                       </div>
                       <div className="flex-1">
@@ -76,7 +76,7 @@ export function HeroSection() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-md border">
-                      <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
+                      <div className="h-8 w-8 rounded-full bg-blue-600/10 text-blue-700 flex items-center justify-center">
                         <Mail className="h-4 w-4" />
                       </div>
                       <div className="flex-1">
@@ -92,7 +92,7 @@ export function HeroSection() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3 p-3 rounded-md border">
-                      <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
+                      <div className="h-8 w-8 rounded-full bg-blue-600/10 text-blue-700 flex items-center justify-center">
                         <Clock className="h-4 w-4" />
                       </div>
                       <div className="flex-1">
